@@ -1,0 +1,220 @@
+﻿@model IEnumerable<My_Application.Models.DataGet>
+@{
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+
+<div class="row">
+
+    <div id="HideAndShow" class="menu ">
+        <p class="textHideAndShow">MENU</p>
+    </div>
+    <div id="Panel" class="panel">
+
+        <form asp-action="Index">
+            <div class="">
+                <br />
+
+                <div class="center">
+                    <label for="Code" class="label">کد</label>
+                    <input name="Code" type="text" class="input" />
+                </div>
+
+                <br />
+
+                <div class="center">
+                    <label for="name" class="label">نام</label>
+                    <input name="name" type="text" class="input" />
+                </div>
+
+                <br />
+
+                <div class="center">
+                    <div class="input-group-lg">
+                        <label for="DateTime" class="label">تاریخ</label>
+                        <input name="DateTime" type="text" id="inputDate3" class="inputDate" aria-label="date3" aria-describedby="date3" />
+                        <span class="spanDate material-icons md-24 input-group-lg" id="date3">calendar_today</span>
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="center">
+                    <label for="YearSeason" class="label">سال / فصل</label>
+                    <input name="YearSeason" id="SetDate" type="text" class="input" onclick="Click()" />
+                </div>
+
+                <br />
+
+                <div class="center">
+                    <label for="ContractNumber" class="label">شماره قرار داد</label>
+                    <input name="ContractNumber" type="text" class="input" />
+                </div>
+
+                <br />
+
+                <div class="center">
+                    <label for="ContractCount" class="label">تعداد قرار داد</label>
+                    <input name="ContractCount" type="text" class="input" />
+                </div>
+
+                <br />
+
+                <div class="center">
+                    <label for="NoContractCount" class="label">تعداد بدون قرار داد</label>
+                    <input name="NoContractCount" type="text" class="input" />
+                </div>
+
+                <br />
+
+                <div class="center">
+                    <label for="InvoiceNumber" class="label">شماره فاکتور</label>
+                    <input name="InvoiceNumber" type="text" class="input" />
+                </div>
+
+                <br />
+
+                <div class="center">
+                    <label for="Count" class="label">تعداد</label>
+                    <input name="Count" type="text" class="input" />
+                </div>
+
+                <br />
+
+                <div class="center">
+                    <label for="PerSale" class="label">فی فروش</label>
+                    <input name="PerSale" type="text" class="input" onkeyup="separateNum(this.value,this);" />
+                </div>
+
+                <br />
+
+                <div class="center">
+                    <label for="NetSales" class="label">خالص فروش</label>
+                    <input name="NetSales" type="text" class="input" onkeyup="separateNum(this.value,this);" />
+                </div>
+
+                <br />
+
+                <div class="center">
+                    <label for="Discount" class="label">تخفیف</label>
+                    <input name="Discount" type="text" class="input" onkeyup="separateNum(this.value,this);" />
+                </div>
+
+                <br />
+
+                <div class="center">
+                    <label for="SalesTax" class="label">فروش با ارزش افزوده</label>
+                    <input name="SalesTax" type="text" class="input" onkeyup="separateNum(this.value,this);" />
+                </div>
+
+                <br />
+
+                <div class="center">
+                    <label for="ReturnedCount" class="label">تعداد برگشت</label>
+                    <input name="ReturnedCount" type="text" class="input" />
+                </div>
+
+                <br />
+
+                <div class="center">
+                    <label for="RefundAmount" class="label">مبلغ برگشت</label>
+                    <input name="RefundAmount" type="text" class="input" onkeyup="separateNum(this.value,this);" />
+                </div>
+
+                <br />
+
+                <div class="center">
+                    <label for="ReceivedMoney" class="label">مبلغ دریافت</label>
+                    <input name="ReceivedMoney" type="text" class="input" onkeyup="separateNum(this.value,this);" />
+                </div>
+
+                <br />
+
+                <div class="center">
+                    <label for=""></label>
+                    <input type="submit" value="SUBMIT" class="input" />
+                </div>
+                <br />
+            </div>
+        </form>
+    </div>
+
+    <div class="main col-7 bg-dark">
+
+        <div class="mynavbar">
+
+            <form>
+
+                <div class="dropdown">
+                    <button class="dropbtn">سال مالی</button>
+                    <div class="dropdown-content">
+                        <a href="#">1399</a>
+                        <a href="#">1398</a>
+                        <a href="#">1397</a>
+                    </div>
+                </div>
+
+                <input class="mysearch" type="search" placeholder="جستجو" aria-label="Search">
+                <button type="button" class="btnsearch btn btn-outline-success">جستجو</button>
+
+            </form>
+
+        </div>
+
+        <br />
+
+        <div class="myTabel">
+            <table class="Arvin table table-bordered table-striped table-dark table-lg">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Code)</th>
+                        <th>@Html.DisplayNameFor(model => model.Name)</th>
+                        <th>@Html.DisplayNameFor(model => model.DateTime)</th>
+                        <th>@Html.DisplayNameFor(model => model.YearSeason)</th>
+                        <th>@Html.DisplayNameFor(model => model.ContractNumber)</th>
+                        <th>@Html.DisplayNameFor(model => model.ContractCount)</th>
+                        <th>@Html.DisplayNameFor(model => model.NoContractCount)</th>
+                        <th>@Html.DisplayNameFor(model => model.InvoiceNumber)</th>
+                        <th>@Html.DisplayNameFor(model => model.Count)</th>
+                        <th>@Html.DisplayNameFor(model => model.PerSale)</th>
+                        <th>@Html.DisplayNameFor(model => model.NetSales)</th>
+                        <th>@Html.DisplayNameFor(model => model.Discount)</th>
+                        <th>@Html.DisplayNameFor(model => model.SalesTax)</th>
+                        <th>@Html.DisplayNameFor(model => model.ReturnedCount)</th>
+                        <th>@Html.DisplayNameFor(model => model.RefundAmount)</th>
+                        <th>@Html.DisplayNameFor(model => model.ReceivedMoney)</th>
+                    </tr>
+                </thead>
+                <!--Table head-->
+                <!--Table body-->
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.Code)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                            <td>@Html.DisplayFor(modelItem => item.DateTime)</td>
+                            <td>@Html.DisplayFor(modelItem => item.YearSeason)</td>
+                            <td>@Html.DisplayFor(modelItem => item.ContractNumber)</td>
+                            <td>@Html.DisplayFor(modelItem => item.ContractCount)</td>
+                            <td>@Html.DisplayFor(modelItem => item.NoContractCount)</td>
+                            <td>@Html.DisplayFor(modelItem => item.InvoiceNumber)</td>
+                            <td>@Html.DisplayFor(modelItem => item.InvoiceNumber)</td>
+                            <td>@Html.DisplayFor(modelItem => item.PerSale)</td>
+                            <td>@Html.DisplayFor(modelItem => item.NetSales)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Discount)</td>
+                            <td>@Html.DisplayFor(modelItem => item.SalesTax)</td>
+                            <td>@Html.DisplayFor(modelItem => item.ReturnedCount)</td>
+                            <td>@Html.DisplayFor(modelItem => item.RefundAmount)</td>
+                            <td>@Html.DisplayFor(modelItem => item.ReceivedMoney)</td>
+                        </tr>
+                    }
+
+                </tbody>
+                <!--Table body-->
+            </table>
+            <!--Table-->
+        </div>
+    </div>
+</div>

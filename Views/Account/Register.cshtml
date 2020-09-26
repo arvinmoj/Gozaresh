@@ -1,0 +1,71 @@
+@model My_Application.Models.RegisterViewModel
+
+@{ Layout = "~/Views/Shared/_LayoutLogin.cshtml"; }
+
+
+<div class="container register">
+    <div class="row">
+        <!-- Right Side Title -->
+
+        <div class="col-12 col-md-3 register-right">
+            <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+            <h3><pre class="text-light">S H O K A T</pre></h3>
+        </div>
+        <!-- /Right Side Title -->
+        <!-- Left Side Forms -->
+        <div class="col-12 col-md-9">
+            <div class="register-left p-3">
+                <!-- Tabs Nav-bar -->
+                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a href="/Account/Login" class="nav-link" id="profile-tab" >ورود به سایت</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">  
+                        <h3 class="register-heading">ثبت نام</h3>
+                        <form asp-action="Register" method="Post">
+                            <div class="row register-form mx-auto">
+
+                                <div class="col-12 col-md-6">
+
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                    <div class="form-group">
+                                        <input asp-for="Name"  class="form-control" placeholder="* نام" />
+                                        <span asp-validation-for="Name" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input asp-for="Email"  class="form-control" placeholder="پست الکترونیک *" />
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="col-12 col-md-6">
+
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                    <div class="form-group">
+                                        <input asp-for="Password" class="form-control" placeholder="رمز عبور *" />
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input asp-for="RePassword" class="form-control" placeholder="تکرار رمز عبور *" />
+                                        <span asp-validation-for="RePassword" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="submit" class="btnRegister" value="عضویت" />
+                                    </div>
+
+                                </div>
+                            </div>
+                        </form>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+﻿@model My_Application.Models.RegisterViewModel
+
+@{ Layout = "~/Views/Shared/_LayoutLogin.cshtml"; }
+
+
+<div class="container register">
+    <div class="row">
+        <!-- Right Side Title -->
+
+        <div class="col-12 col-md-3 register-right">
+            <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+            <h3><pre class="text-light">S H O K A T</pre></h3>
+        </div>
+        <!-- /Right Side Title -->
+        <!-- Left Side Forms -->
+        <div class="col-12 col-md-9">
+            <div class="register-left p-3">
+                <!-- Tabs Nav-bar -->
+                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a href="/Account/Register" class="nav-link" id="profile-tab" >ثبت نام</a>
+                    </li>
+                </ul>
+                <!-- /Tabs Nav-bar -->
+                <div class="tab-content" id="myTabContent">
+                    <!-- Tab 1 -->
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">ورود به سایت</h3>
+                        <form action="send_mail.php" method="post">
+                            <div class="row register-form mx-auto">
+
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="پست الکترونیک *"
+                                               value="" />
+                                    </div>
+
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="رمز عبور *"
+                                               value="" />
+                                    </div>
+                                    <input type="submit" class="btnRegister" value="ورود" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
