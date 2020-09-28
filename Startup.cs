@@ -74,7 +74,7 @@ namespace My_Application
                 endpoints.MapControllerRoute(
                     name: "default",
                     //pattern: "{controller=Account}/{action=Login}/{id?}");
-                    pattern: "{controller=Main}/{action=Index}/{id?}");
+                    pattern: "{controller=MainDataTable}/{action=Index}/{id?}");
             endpoints.MapRazorPages();
             });
         }

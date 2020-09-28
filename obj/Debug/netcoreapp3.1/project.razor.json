@@ -14412,6 +14412,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/macbook/Desktop/GozareshSaz/My_Application/My_Application/Views/Shared/_LayoutMainDataTable.cshtml",
+      "TargetPath": "Views\\Shared\\_LayoutMainDataTable.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/macbook/Desktop/GozareshSaz/My_Application/My_Application/Views/Account/Login.cshtml",
       "TargetPath": "Views\\Account\\Login.cshtml",
       "FileKind": "mvc"
@@ -14439,6 +14444,11 @@
     {
       "FilePath": "/Users/macbook/Desktop/GozareshSaz/My_Application/My_Application/Views/Account/Register.cshtml",
       "TargetPath": "Views\\Account\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/macbook/Desktop/GozareshSaz/My_Application/My_Application/Views/MainDataTable/Index.cshtml",
+      "TargetPath": "Views\\MainDataTable\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
