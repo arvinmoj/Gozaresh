@@ -1,4 +1,4 @@
-<html lang="en">
+﻿<html lang="en">
 <head>
 
     <meta charset="UTF-8">
@@ -9,10 +9,26 @@
     @* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> *@
     <link rel="stylesheet" href="~/lib/bootstrap-v4-rtl-master/dist/css/bootstrap-rtl.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+    @*<link rel="stylesheet" href="/wwwroot/Mycss.css">*@
+
+    @* <link rel="stylesheet" href="~/Mycss.css"/> *@
+
+    @* <link rel="stylesheet" href="/wwwroot/css/Sidenav/style.css"> *@
+
+    <link rel="stylesheet" href="~/css/Sidenav/style.css"/>
 
 </head>
 
-<body class="rtl">
+<body class="rtl bg-dark">
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    <span class="menu" onclick="openNav()">&#9776;</span>
 
     @RenderBody()
 
@@ -23,11 +39,47 @@
     <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
 
-    <script> 
+    <script>
+
         alert("Hi");
-        $('.mydatatable').dataTable();
-    </script>
-    
+        //$('.mydatatable').dataTable();
+
+        $(document).ready(function () {
+            $('.mydatatable').dataTable({
+                "language": {
+                    "sEmptyTable": "هیچ داده‌ای در جدول وجود ندارد",
+                    "sInfo": "نمایش _START_ تا _END_ از _TOTAL_ ردیف",
+                    "sInfoEmpty": "نمایش 0 تا 0 از 0 ردیف",
+                    "sInfoFiltered": "(فیلتر شده از _MAX_ ردیف)",
+                    "sInfoPostFix": "",
+                    "sInfoThousands": ",",
+                    "sLengthMenu": "نمایش _MENU_ ردیف",
+                    "sLoadingRecords": "در حال بارگزاری...",
+                    "sProcessing": "در حال پردازش...",
+                    "sSearch": "جستجو : ",
+                    "sZeroRecords": "رکوردی با این مشخصات پیدا نشد",
+                    "oPaginate": {
+                        "sFirst": "برگه‌ی نخست",
+                        "sLast": "برگه‌ی آخر",
+                        "sNext": "بعدی",
+                        "sPrevious": "قبلی"
+                    },
+                    "oAria": {
+                        "sSortAscending": ": فعال سازی نمایش به صورت صعودی",
+                        "sSortDescending": ": فعال سازی نمایش به صورت نزولی"
+                    }
+                }
+            });
+        });
+
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }</script>
+
     @RenderSection("Scripts", required: false)
 
 </body>

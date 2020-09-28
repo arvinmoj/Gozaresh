@@ -6089,7 +6089,7 @@
       "outputPath": "/Users/macbook/Desktop/GozareshSaz/My_Application/My_Application/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/macbook/.nuget/NuGet/NuGet.Config"
+        "/Users/macbook/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
