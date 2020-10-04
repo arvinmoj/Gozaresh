@@ -24,5 +24,10 @@ namespace My_Application.Controllers
 
             return View(displaydata);
         }
+
+        public IActionResult Submit()
+        {
+            return View();
+        }
     }
 }

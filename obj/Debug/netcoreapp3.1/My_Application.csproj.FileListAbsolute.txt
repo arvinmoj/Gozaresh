@@ -118,3 +118,4 @@
 /Users/macbook/Desktop/GozareshSaz/My_Application/My_Application/obj/Debug/netcoreapp3.1/Razor/Views/Account/Register.cshtml.g.cs
 /Users/macbook/Desktop/GozareshSaz/My_Application/My_Application/obj/Debug/netcoreapp3.1/Razor/Views/MainDataTable/Index.cshtml.g.cs
 /Users/macbook/Desktop/GozareshSaz/My_Application/My_Application/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_LayoutMainDataTable.cshtml.g.cs
+/Users/macbook/Desktop/GozareshSaz/My_Application/My_Application/obj/Debug/netcoreapp3.1/Razor/Views/MainDataTable/Submit.cshtml.g.cs

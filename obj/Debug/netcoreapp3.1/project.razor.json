@@ -14392,6 +14392,11 @@
   "RootNamespace": "My_Application",
   "Documents": [
     {
+      "FilePath": "/Users/macbook/Desktop/GozareshSaz/My_Application/My_Application/Views/MainDataTable/Submit.cshtml",
+      "TargetPath": "Views\\MainDataTable\\Submit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/macbook/Desktop/GozareshSaz/My_Application/My_Application/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
